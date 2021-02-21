@@ -6,22 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>クリスタ初級編</title>
     <link rel="stylesheet" href="style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body>
     <header class="l-header">
         <div class="c-titles">
-            <a href="#">クリ★スタ</a>
+            <a class="c-titles--topIcon" href="#">クリ★スタ</a>
         </div>
-        <nav class="c-navigation">
-            <ul>
-                <li>About</li>
-                <li>Service</li>
-                <li>Contacts</li>
-            </ul>
-        </nav>
+        <div class="p-navigation"> <!--js addClass "is-open"-->
+            <nav class="p-navigation__inner">
+                <ul>
+                    <li>About</li>
+                    <li>Service</li>
+                    <li>Contacts</li>
+                </ul>
+            </nav>
+            <div class="js-toggle_btn c-button--navigation"> <!--一部コピペ-->
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </header>
     <div class="p-mainVisual">
-        <h1>Cresta Design.</h1>
+        <div class="p-mainVisual__inner">
+            <h1>Cresta Design.</h1>
+        </div>
     </div>
     <article>
         <div class="l-container">
@@ -99,5 +109,6 @@
     <footer class="l-footer">
         <small>©︎crest.design all rights reserved</small>
     </footer>
+    <script src="js/script.js"></script> <!--jQuery-->
 </body>
 </html>

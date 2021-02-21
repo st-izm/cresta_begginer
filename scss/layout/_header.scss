@@ -1,0 +1,13 @@
+.l-header {
+    position: fixed;
+    z-index: 10;
+    height: 74px;
+    width: 100vw;
+    padding: 0 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(27, 29, 16, 0.7) 0% 0% no-repeat padding-box;
+    border-bottom: 1px solid white;
+}

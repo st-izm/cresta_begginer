@@ -1,0 +1,43 @@
+.p-mainVisual {
+    background-color: rgba(#1d1d1d, 1.0); /*ウィンドウ幅が中途半端な場合の背景色の補足*/
+    height: 150vw;
+    max-height: 90vh;
+    &__inner {
+        height: 100%;
+        width: 100vw;
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: center;
+        background: url(image/fv-bgi_sp@2x.jpg) no-repeat;
+        background-size: 100%;
+        h1 {
+            width: 300px;
+            height: 100px;
+            display: block;
+            position: absolute;
+            top: 320px;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            display: inline-block;
+            font-size: 3.0rem;
+            font-family: roboto,medium;
+            letter-spacing: 1.5px;
+            color: white;
+            font-weight: bold;
+            line-height: 100px;
+            border: 1px solid white;
+        }
+        @include sp {
+            height: 740px;
+            max-width: none;
+            background: url(image/fv-bgi@2x.jpg) no-repeat;
+            h1 {
+                width: 450px;
+                height: 136px;
+                line-height: 136px;
+                top: 376px;
+                font-size: 5.0rem;
+            }
+        }
+    }
+}

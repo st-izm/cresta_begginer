@@ -1,0 +1,101 @@
+.p-navigation {
+    &__inner {
+        /*コピペ*/
+        display: block;
+        position: fixed;
+        top: -100vh;
+        left: 0px;
+        right: 0px;
+        width: 100vw;
+        background: rgba(27, 19, 16, 0.98);
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        transition: all .5s;
+        z-index: 20;
+        /*コピペここまで*/
+        ul {
+            height: 50vh;
+            margin-top: 30vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            li {
+                color: white;
+            }
+        }
+        @include sp {
+            display: inline;
+            ul {
+                width: 300px;
+                flex-direction: row;
+                justify-content: space-between;
+                li {
+                    padding: 1% 2%;
+                    font-size: 1.6rem;
+                    cursor: pointer;
+                    &:hover {
+                        border-bottom: 1px solid white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.js-toggle_btn {
+    display: block;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    transition: all .5s;
+    cursor: pointer;
+    z-index: 20;
+    span {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        border-radius: 4px;
+        transition: all .5s;
+        &:nth-child(1) {
+            top: 4px;
+        }
+        &:nth-child(2) {
+            top: 14px;
+        }
+        &:nth-child(3) {
+            bottom: 4px;
+        }
+    }
+    @include sp {
+        display: none;
+    }
+}
+.is-open {
+    nav {
+        top: 0;
+        bottom: 0;
+    }
+    .js-toggle_btn {
+        span {
+            background-origin: #fff;
+            &:nth-child(1) {
+                -webkit-transform: translateY(10px) rotate(-315deg);
+                transform: translateY(10px) rotate(-315deg);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                -webkit-transform: translateY(-10px) rotate(315deg);
+                transform: translateY(-10px) rotate(315deg);
+            }
+        }
+    }
+}

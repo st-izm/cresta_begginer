@@ -504,4 +504,222 @@ img {
 .l-container {
   max-width: 1030px;
 }
+
+.l-header {
+  position: fixed;
+  z-index: 10;
+  height: 74px;
+  width: 100vw;
+  padding: 0 8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(27, 29, 16, 0.7) 0% 0% no-repeat padding-box;
+  border-bottom: 1px solid white;
+}
+
+.c-button {
+  cursor: pointer;
+}
+
+.c-titles {
+  display: block;
+}
+
+.c-titles--topIcon {
+  display: block;
+  font-size: 2.6rem;
+  font: normal normal medium 26px/34px Roboto;
+  color: white;
+}
+
+.p-mainVisual {
+  background-color: #1d1d1d;
+  /*ウィンドウ幅が中途半端な場合の背景色の補足*/
+  height: 150vw;
+  max-height: 90vh;
+}
+
+.p-mainVisual__inner {
+  height: 100%;
+  width: 100vw;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  background: url(image/fv-bgi_sp@2x.jpg) no-repeat;
+  background-size: 100%;
+}
+
+.p-mainVisual__inner h1 {
+  width: 300px;
+  height: 100px;
+  display: block;
+  position: absolute;
+  top: 320px;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  display: inline-block;
+  font-size: 3.0rem;
+  font-family: roboto,medium;
+  letter-spacing: 1.5px;
+  color: white;
+  font-weight: bold;
+  line-height: 100px;
+  border: 1px solid white;
+}
+
+@media screen and (min-width: 900px) {
+  .p-mainVisual__inner {
+    height: 740px;
+    max-width: none;
+    background: url(image/fv-bgi@2x.jpg) no-repeat;
+  }
+  .p-mainVisual__inner h1 {
+    width: 450px;
+    height: 136px;
+    line-height: 136px;
+    top: 376px;
+    font-size: 5.0rem;
+  }
+}
+
+.p-navigation__inner {
+  /*コピペ*/
+  display: block;
+  position: fixed;
+  top: -100vh;
+  left: 0px;
+  right: 0px;
+  width: 100vw;
+  background: rgba(27, 19, 16, 0.98);
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  z-index: 20;
+  /*コピペここまで*/
+}
+
+.p-navigation__inner ul {
+  height: 50vh;
+  margin-top: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.p-navigation__inner ul li {
+  color: white;
+}
+
+@media screen and (min-width: 900px) {
+  .p-navigation__inner {
+    display: inline;
+  }
+  .p-navigation__inner ul {
+    width: 300px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .p-navigation__inner ul li {
+    padding: 1% 2%;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+  .p-navigation__inner ul li:hover {
+    border-bottom: 1px solid white;
+  }
+}
+
+.js-toggle_btn {
+  display: block;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.js-toggle_btn span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.js-toggle_btn span:nth-child(1) {
+  top: 4px;
+}
+
+.js-toggle_btn span:nth-child(2) {
+  top: 14px;
+}
+
+.js-toggle_btn span:nth-child(3) {
+  bottom: 4px;
+}
+
+@media screen and (min-width: 900px) {
+  .js-toggle_btn {
+    display: none;
+  }
+}
+
+.is-open nav {
+  top: 0;
+  bottom: 0;
+}
+
+.is-open .js-toggle_btn span {
+  background-origin: #fff;
+}
+
+.is-open .js-toggle_btn span:nth-child(1) {
+  -webkit-transform: translateY(10px) rotate(-315deg);
+  transform: translateY(10px) rotate(-315deg);
+}
+
+.is-open .js-toggle_btn span:nth-child(2) {
+  opacity: 0;
+}
+
+.is-open .js-toggle_btn span:nth-child(3) {
+  -webkit-transform: translateY(-10px) rotate(315deg);
+  transform: translateY(-10px) rotate(315deg);
+}
 /*# sourceMappingURL=style.css.map */
